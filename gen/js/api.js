@@ -5,7 +5,7 @@ import {
   T0Decode // BinLiDecode
 } from './_.pb.js'
 
-import hpc from 'u/hpc.js'
+import hpc from '-/lib/hpc.js'
 
 const [
   _set,
