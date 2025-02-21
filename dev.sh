@@ -9,7 +9,7 @@ set -ex
 name=$(basename $DIR)
 
 onexit() {
-  docker compose -p $name stop
+  docker compose -p $name down
 }
 
 trap onexit EXIT
