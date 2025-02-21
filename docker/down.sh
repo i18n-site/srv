@@ -5,5 +5,4 @@ cd $DIR
 set -ex
 
 dc="mise exec -- docker-compose"
-$dc stop $@
-$dc down $@
+$dc -p $(basename $(dirname $DIR)) down $@

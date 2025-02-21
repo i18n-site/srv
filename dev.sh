@@ -18,8 +18,7 @@ set -a
 set +a
 
 ./docker/up.sh -d
-./sh/wait-for-it.sh $R_NODE -t 999
 
 exec mise exec -- bun x concurrently --names "kv,srv" \
   "docker-compose -p $name logs -f" \
-  "./srv/dev.sh"
+  "./sh/wait-for-it.sh $R_NODE && ./srv/dev.sh"
