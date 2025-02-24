@@ -11,6 +11,7 @@ exec watchexec \
   --shell=none \
   --project-origin . \
   -w . \
+  -w ../../mod \
   --exts rs,toml \
   -r \
   -- "../srv.sh"
