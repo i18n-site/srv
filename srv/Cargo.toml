@@ -23,7 +23,7 @@ tokio = { version = "1.43.0", features = ["macros", "rt", "rt-multi-thread"] }
 req_ = { version = "0.1.29", features = ["cookie"] }
 dstr = { version = "0.1.4", features = ["dvec"] }
 hpc_captcha = "0.1.2"
-hpc = "0.1.28"
+hpc = "0.1.30"
 icall = "0.1.38"
 s_ = "0.1.6"
 
