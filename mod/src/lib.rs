@@ -1,5 +1,5 @@
 pub mod captcha {
-  pub use captcha_::captcha;
+  pub use captcha_::{captcha, verify};
 }
 
 pub mod auth {
