@@ -10,9 +10,9 @@ description = "hpc server"
 [dependencies]
 mod = { path = "../mod" }
 pb = { path = "../gen/pb" }
-ctx_ = { version = "0.1.4", features = ["cookie", "captcha"] }
-hpc = { version = "0.1.47" }
-icall = { version = "0.1.46" }
+ctx_ = { version = "0.1.8", features = ["cookie", "captcha"] }
+hpc = { version = "0.1.48" }
+ih = { version = "0.1.2" }
 
 aok = "0.1.17"
 axum = { version = "0.8.1", features = ["tracing", "macros"] }
@@ -24,7 +24,7 @@ static_ = "0.1.14"
 static_init = "1.0.3"
 tokio = { version = "1.43.0", features = ["macros", "rt", "rt-multi-thread"] }
 dstr = { version = "0.1.4", features = ["dvec"] }
-hpc_captcha = "0.1.3"
+hpc_captcha = "0.1.4"
 s_ = "0.1.6"
 
 [package.metadata.cargo-machete]

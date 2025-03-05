@@ -15,7 +15,7 @@
     "esbuild": "^0.25.0",
     "js-yaml": "^4.1.0",
     "lodash-es": "^4.17.21",
-    "rust2proto": "^0.1.10",
+    "rust2proto": "^0.1.11",
     "typescript": "^5.8.2",
     "zx": "^8.4.0"
   },
