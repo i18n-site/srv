@@ -1,0 +1,10 @@
+[package]
+name = "r_"
+version = "0.1.0"
+edition = "2024"
+repository = "https://github.com/i18n-site/rust.git"
+homepage = "https://github.com/i18n-site/rust/tree/dev/_tmpl"
+description = "redis key const for hpc"
+keywords = []
+
+[dependencies]
