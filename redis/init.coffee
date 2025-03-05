@@ -71,7 +71,7 @@ export default main = =>
   )
   console.log "-- #{name}\n\n"+code
 
-  code = '#!lua name=hpcSrv\n'+code
+  code = '#!lua name=hpc\n'+code
 
   # base = dirname ROOT
   # for mod from MOD
