@@ -1,6 +1,7 @@
 [package]
 name = "r_"
-version = "0.1.1"
+license = "MulanPSL-2.0"
+version = "0.1.2"
 edition = "2024"
 repository = "https://github.com/i18n-site/srv.git"
 homepage = "https://github.com/i18n-site/srv/tree/main/redis"
