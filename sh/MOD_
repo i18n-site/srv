@@ -1,0 +1,26 @@
+import 'zx/globals';
+
+import {
+  join,
+  dirname
+} from 'path';
+
+import read from '@3-/read';
+
+import {
+  parse
+} from '@iarna/toml';
+
+export const ROOT = dirname(import.meta.dirname);
+
+export const DIR_MOD = join(ROOT, 'mod');
+
+const MOD_LI = [];
+
+Object.values(parse(read(join(DIR_MOD, 'Cargo.toml'))).dependencies).forEach(({path}) => {
+  if (path) {
+    MOD_LI.push(join(DIR_MOD, path));
+  }
+})
+
+export default MOD_LI
