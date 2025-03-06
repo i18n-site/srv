@@ -1,5 +1,3 @@
-import 'zx/globals';
-
 import {
   join,
   dirname

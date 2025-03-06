@@ -1,15 +1,21 @@
 #!/usr/bin/env coffee
 
 > zx/globals:
-  path > join dirname
-  @3-/read
-  @iarna/toml > parse
+  ./MOD_LI.js
+  path > join
+  fs > existsSync
 
-ROOT = dirname import.meta.dirname
-DIR_MOD = join ROOT,'mod'
+upgrade = (dir)=>
+  cron = join dir, 'cron'
+  if not existsSync cron
+    return
+  cd cron
+  console.log cron
+  await $"deno outdated --update"
+  return
 
-mod_li = []
+for dir from MOD_LI
+  await upgrade dir
 
-for {path} from Object.values parse(read join(DIR_MOD,'Cargo.toml')).dependencies
-  if path
-    console.log join DIR_MOD, path
+process.exit()
+
