@@ -9,9 +9,9 @@ import {
   parse
 } from '@iarna/toml';
 
-export const ROOT = dirname(import.meta.dirname);
 
-export const DIR_MOD = join(ROOT, 'mod');
+export const DIR_MOD = dirname(import.meta.dirname);
+export const ROOT = dirname(DIR_MOD);
 
 const MOD_LI = [];
 

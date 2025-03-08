@@ -3,12 +3,12 @@
 # dist cron to deno deploy for mod
 
 > zx/globals:
-  ./sh/MOD_LI.js:@ > ROOT
+  ./sh/MOD_LI.js:@ > DIR_MOD
   path > join basename
   fs > existsSync
 
 $.verbose = true
-await $"#{ROOT}/sh/cronEnv.sh"
+await $"#{DIR_MOD}/sh/cronEnv.sh"
 
 dist = (dir)=>
   cron = join dir, 'cron'
@@ -16,7 +16,7 @@ dist = (dir)=>
     return
   cd cron
   name = basename(dir).replace(/_$/,'')
-  await $"#{ROOT}/sh/cronDist.sh #{name}"
+  await $"#{DIR_MOD}/sh/cronDist.sh #{name}"
   return
 
 for dir from MOD_LI
