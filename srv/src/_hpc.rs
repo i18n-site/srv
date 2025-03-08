@@ -1,1 +1,1 @@
-../../gen/_hpc.rs
+../../mod/gen/_hpc.rs

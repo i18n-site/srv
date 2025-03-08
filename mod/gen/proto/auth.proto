@@ -2,7 +2,6 @@
  * ## auth_
  * - @captcha signin::mail(SigninMailArgs)
  * - @captcha signup::mail(SignupMailArgs)
- * - signup::mail_verify(SignupMailVerifyArgs) → SignupMailVerify
  */
 
 syntax = "proto3";
@@ -16,15 +15,4 @@ message SigninMailArgs {
 message SignupMailArgs {
   string address = 1;
   string password = 2;
-}
-
-message SignupMailVerifyArgs {
-  string address = 1;
-  string code = 2;
-}
-
-enum SignupMailVerify {
-  OK = 0;
-  INVALID_ADDRESS = 1;
-  PASSWORD_TOO_SHORT = 2;
 }

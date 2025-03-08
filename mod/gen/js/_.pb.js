@@ -198,29 +198,3 @@ const T5Read = (msg, reader) => {
   }
   return msg;
 };
-/**
- * Serializes T6 to protobuf.
- */
-export const T6Encode = (msg) =>
-  _P.getResultBuffer(T6Write(msg, _P.binaryWriter()));
-/**
- * Deserializes T6 from protobuf.
- */
-export const T6Decode = (bytes) => T6Read(T6New(), _P.binaryReader(bytes));
-const T6New = () => 0;
-const T6Write = _P.encoder1(_P.writeInt32);
-const T6Read = (msg, reader) => {
-  while (_P.nextField(reader)) {
-    switch (_P.getFieldNumber(reader)) {
-      case 1: {
-        msg = _P.readInt32(reader);
-        break;
-      }
-      default: {
-        _P.skipField(reader);
-        break;
-      }
-    }
-  }
-  return msg;
-};

@@ -77,18 +77,6 @@ Func::AuthSignupMail => {
   }
 }
 
-Func::AuthSignupMailVerify => {
-  let args: pb::auth::SignupMailVerifyArgs = args_decode(args,"auth::SignupMailVerify")?;
-  match auth::signup::mail_verify(&args.address,&args.code).await {
-    Err(err)=>call_err("auth::signup::mail_verify", err, captcha, || dvec![&args.address,&args.code].join(",")).await?,
-    Ok(r)=>
-  match (r as i32).try_into() {
-    Ok::<pb::auth::SignupMailVerify, _>(r) => (State::OK, r.serialize_to_vec()),
-    Err(err) => call_err("auth::SignupMailVerify", anyhow!("enum invaild {err}"), captcha, ||s_::EMPTY).await?
-  }
-  }
-}
-
 
 Func::DemoCaptcha => {
   ctx_::captcha(ctx,captcha).await?;

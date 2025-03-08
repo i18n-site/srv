@@ -1,8 +1,8 @@
 DIR_HPC=$(dirname $(dirname $DIR))/hpc/coffee/rust2proto
 
-mkdir -p gen
+mkdir -p gen/js
 cd gen
-rm -rf pb
+find . -mindepth 1 ! -name 'package.json' -delete
 cargo new --lib pb
 cd ..
 

@@ -1,6 +1,6 @@
 import {
   T3Encode,T5Encode,
-  T4Decode,T1Decode,T6Decode,
+  T4Decode,T1Decode,
   T0Encode, //CallLiEncode,
   T0Decode // BinLiDecode
 } from './_.pb.js'
@@ -20,6 +20,5 @@ export const captcha = _noArgs(2,T1Decode) /* id:Vec<u8>,img:Vec<u8>,tip:Vec<u8>
 export const userName = _noArgs(3,T4Decode) /* :string */
 export const authSigninMail = (address /* str */,password /* str */)=>_req(4,NULL,T5Encode([address,password]))
 export const authSignupMail = (address /* str */,password /* str */)=>_req(5,NULL,T5Encode([address,password]))
-export const authSignupMailVerify = (address /* str */,code /* str */)=>_req(6,T6Decode,T5Encode([address,code])) /* SIGNUP_MAIL_VERIFY:enum */
-export const demoCaptcha = _noArgs(7,NULL)
-export const demoManualCaptcha = _noArgs(8,NULL)
+export const demoCaptcha = _noArgs(6,NULL)
+export const demoManualCaptcha = _noArgs(7,NULL)
