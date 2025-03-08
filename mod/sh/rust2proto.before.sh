@@ -1,4 +1,4 @@
-DIR_HPC=$(dirname $DIR)/hpc/coffee/rust2proto
+DIR_HPC=$(dirname $(dirname $DIR))/hpc/coffee/rust2proto
 
 mkdir -p gen
 cd gen

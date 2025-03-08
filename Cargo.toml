@@ -1,6 +1,6 @@
 [workspace]
 members = ["mod", "redis/r_", "srv"]
-exclude = ["gen/pb"]
+exclude = ["mod/gen/pb"]
 resolver = "2"
 
 [profile.release]

@@ -9,7 +9,7 @@ description = "hpc server"
 
 [dependencies]
 mod = { path = "../mod" }
-pb = { path = "../gen/pb" }
+pb = { path = "../mod/gen/pb" }
 ctx_ = { version = "0.1.8", features = ["cookie", "captcha"] }
 hpc = { version = "0.1.48" }
 ih = { version = "0.1.15" }
