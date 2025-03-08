@@ -1,5 +1,7 @@
 #!/usr/bin/env coffee
 
+# dist cron to deno deploy for mod
+
 > zx/globals:
   ./sh/MOD_LI.js:@ > ROOT
   path > join basename
