@@ -10,6 +10,6 @@ ncu -u && bun i
 cargo update
 cargo upgrade -i --recursive --verbose
 
-cd gen/js
+cd mod/gen/js
 ncu -u
 bun i

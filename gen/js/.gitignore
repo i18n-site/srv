@@ -1,5 +1,0 @@
-**/*.js
-!/*.js
-/FUNC.js
-*.pb.js
-_.proto
