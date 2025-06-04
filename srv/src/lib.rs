@@ -1,7 +1,7 @@
 mod gen_captcha;
 
 use aok::Void;
-use axum::{Router, extract::Request, response::Response};
+use axum::{extract::Request, response::Response, Router};
 use gen_captcha::GenCaptcha;
 mod _hpc;
 
